@@ -8,11 +8,8 @@ public class JokesServiceImpl implements JokesService{
 
     private final ChuckNorrisQuotes chuckNorrisQuotes;
 
-    /*Note:
-    * We do this so the Chuck Norris class will be initialized once instead of with every call of the class.
-    * */
-    public JokesServiceImpl() {
-        this.chuckNorrisQuotes = new ChuckNorrisQuotes();
+    public JokesServiceImpl(ChuckNorrisQuotes chuckNorrisQuotes) {
+        this.chuckNorrisQuotes = chuckNorrisQuotes;
     }
 
     @Override
